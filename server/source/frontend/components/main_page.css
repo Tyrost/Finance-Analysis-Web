@@ -1,0 +1,220 @@
+/* 
+!NOT MY CODE!
+Template Name: Only CSS: 3D Scan
+Thank you Yusuke Nakaya for the amazing template!
+ */
+
+
+ body {
+  background-color: solid white;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  min-height: 100vh;
+  overflow-x: hidden; 
+  overflow-y: auto;   
+  display: flex;
+  font-family: 'Anton', sans-serif;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.main_background_container {
+  position: fixed;
+  top: 350px;
+}
+
+.vr {
+    position: fixed;
+    top: 400px;
+    left: 50%;
+    width: 350px;
+    height: 350px;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+}
+  
+  .vr_layer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 153, 255, 0.006);
+    border-radius: 10px;
+    transform: preserve-3d;
+  }
+  
+  .vr_layer:nth-child(1) {
+    transform: translateZ(17.5px);
+  }
+
+  .vr_layer:nth-child(1) .vr_layer_item {
+    animation-delay: -210ms;
+  }
+  
+  .vr_layer_item {
+    width: 70%;
+    height: 70%; 
+    border: 3px solid #fff;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    animation: sphere 3000ms cubic-bezier(0.215, 0.610, 0.355, 1.000) alternate infinite,
+               color 5000ms linear alternate infinite;
+    transition: 500ms;
+  }
+
+  @keyframes sphere {
+    0% {
+      transform: scale(0) rotateZ(45deg);
+    }
+  
+    50% {
+      transform: scale(0) rotateZ(45deg);
+    }
+  
+    100% {
+      transform: scale(1) rotateZ(45deg);
+    }
+  }
+  
+  @keyframes color {
+    0% {
+      border-color: #f55;
+    }
+  
+    50% {
+      border-color: #55f;
+    }
+  
+    100% {
+      border-color: #5f5;
+    }
+  }
+
+.bottom-panel-section {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.bottom-panel-section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bottom-panel-section {
+  z-index: 1000;
+  width: 100%;
+  /* Background Here (???) */
+
+  background-size: cover;
+  background-position: center;
+  padding: 5%;
+  margin-top: 120vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  position: relative;
+}
+
+.panel-content {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255, 0));
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid white;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2); 
+  
+  width: 80%;
+  padding: 40px; 
+  margin-top: 0vh;
+}
+
+.more-info-text {
+  color: white; justify-content: left; position: absolute; font-family:Arial, Helvetica, sans-serif;
+}
+
+/*  */
+
+h1 {
+  z-index: 1;
+  display: inline-block;
+  position: absolute;
+  font-size: 100px;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.info-container {
+  width: 250px;
+  height: 350px;
+  outline-width: 1px;
+}
+
+.menu-img {
+  border-radius:10px;
+  border: 1px solid white;
+  position: absolute;
+  width: 250px;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.menu-img:hover {
+  transform: scale(1.3);
+}
+
+.data-paragraph {
+  line-height: 25px;
+  text-align: center;
+  max-width: 70vh;
+  word-spacing: 3px;
+  position: absolute;
+  color: #fff;
+}
+
+#data-img {
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+#data-text {
+  top: 12%;
+  left: 40%;
+}
+
+#markets-img {
+  margin-top: 18%;
+  margin-left: 65%;
+}
+
+#markets-text {
+  top: 35%;
+  left: 10%;
+}
+
+#countries-img {
+  margin-top: 26%;
+  margin-left: 10%;
+}
+
+#countries-text {
+  top: 60%;
+  left: 40%;
+}
+
+#news-img {
+  margin-top: 34%;
+  margin-left: 65%;
+}
+
+#news-text {
+  top: 80%;
+  left: 10%;
+}
+

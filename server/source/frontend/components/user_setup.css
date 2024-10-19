@@ -1,0 +1,112 @@
+body {
+    min-height: 100vh;
+    background-color: solid white;
+    /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+    font-family: Lexend;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.input-group {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 2px solid #4f5158;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    left: 50px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    background: none;
+    outline: none;
+    color: #fff;
+    transition: border-color 0.3s;
+}
+
+.input-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    font-size: 18px;
+    color: #ccc;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    transform: translateY(-25px);
+    color: #a4abd3;
+    font-size: 16px;
+    font-family:Lexend;
+}
+
+.input-box input:focus {
+    border-bottom-color: #3f51b5;
+}
+
+.input-box .input-underline {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #3f4b8f;
+    transition: width 0.3s;
+}
+
+.input-box input:focus ~ .input-underline {
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: #46508d;
+    color: rgb(221, 213, 213);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 400px;
+    font-family: Lexend;
+}
+
+input[type="submit"]:hover {
+    background-color: #7580bd;
+}
+
+
+.title_text {
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 4em; 
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    top: 50px;
+
+}
+
+

@@ -1,0 +1,150 @@
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: none;
+    cursor: pointer;
+    filter: none;
+    padding: 0;
+    position: static;
+    transform: none;
+}
+
+.form-container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.autocomplete-container, 
+.time-span, 
+.start-date, 
+.end-date {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.filter-container {
+    position: absolute;
+    min-width: 90px;
+    top: 180px;
+}
+
+.autocomplete-container label,
+.time-span label,
+.start-date label,
+.end-date label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.autocomplete-container input[type="text"], 
+.start-date input[type="date"], 
+.end-date input[type="date"], 
+.time-span select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.autocomplete-container input[type="text"]:focus, 
+.start-date input[type="date"]:focus, 
+.end-date input[type="date"]:focus, 
+.time-span select:focus {
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+    outline: none;
+}
+
+.autocomplete-container input[type="text"]:hover, 
+.start-date input[type="date"]:hover, 
+.end-date input[type="date"]:hover, 
+.time-span select:hover {
+    border-color: #888;
+}
+
+
+.time-span select {
+    appearance: none;
+    background-position: right 10px center;
+    background-size: 10px 7px;
+    padding-right: 35px;
+}
+
+.filter-container {
+    flex: 0 0 150px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.filter-button {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    background-color: #3f67e9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: #0a07af;
+}
+
+
+.ui-autocomplete {
+    position: absolute;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.autocomplete-container {
+    position: relative;
+}
+
+.ui-autocomplete .ui-menu-item {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.ui-autocomplete .ui-menu-item:last-child {
+    border-bottom: none;
+}
+
+.ui-autocomplete .ui-menu-item:hover,
+.ui-autocomplete .ui-state-focus {
+    background-color: #f0f0f0;
+}
+
+.ui-autocomplete .ui-menu-item:nth-child(n+6) {
+    display: none;
+}
+
+#myChart {
+    /* margin-top: 85vh; */
+    width: 100%;
+    max-width: 900px;
+
+}
